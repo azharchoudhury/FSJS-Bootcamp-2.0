@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals</title>
+</head>
+<body>
+
+<!-- This is internal CSS -->
+
+    <style>
+        /* Universal selector */
+
+        /* *{
+            color: #2270dd;
+            background-color: #fcfc67;
+        } */
+
+        /* Individual selector */
+
+        /* h1{
+            color: rgb(242, 54, 54);
+        }
+
+        p{
+            border: 2px solid #5aef10;
+            background-color: #f8f851;
+        }
+
+        div{
+            font-size: large;
+            color:#2217eb;
+            border: 2px solid #000000;
+        } */
+
+
+        /* Class and ID selector */
+
+        .test{
+            color: #a52a2a;
+        }
+
+        .para3{
+            font-weight: bold;
+            background-color: rgb(238, 247, 104);
+        }
+
+        .names{
+            border: 1px solid #ff0000;
+            margin: 5px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        #azhar{
+            background-color: #e814a1;
+            color: #fbfb61;
+            padding: 10px 5px;
+            border: 2px solid #3057d4;
+        }
+
+        #bhargav{
+            font-size: x-large;
+            padding: 10px;
+            width: 250px;
+            color: #0000ff;
+            background-color: #ffff00;
+        }
+
+        /* And Selector */
+
+        .test.para3{
+            border: 3px dashed #294ef2;
+            padding: 20px;
+            margin-bottom: 100px;
+        }
+
+
+        .test.para2{
+
+            font-size: larger;
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+
+
+        /* Combined Selector */
+
+        #name-list , #item-list{
+            border: 5px solid black;
+            padding: 20px;
+            background-color: #b1eb52;
+            width: 400px;
+            height: 200px;
+        }
+
+        /* Element element selector (inside an element) */
+
+        div p{
+            color: #0000ff;
+            background-color: #f2f845;
+            border: 2px solid #ff0000;
+            padding: 10px;
+        }
+
+
+        ol li{
+            border: 2px solid #ff0000;
+            margin: 5px;
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        /* Direct Child Selector */
+
+        div > ul > li {
+            background-color: #4ce9e9;
+            padding: 10px;
+        }
+
+        div > ol > li {
+            font-size: large;
+            font-weight: 600;
+            background-color: #9acd32;
+            color: #36001a;
+        }
+
+
+        /* General and Adjacent Sibling Selectors*/
+
+        /* General */
+
+        h3 ~ p{
+            font-size: 25px;
+            color: #e408c6;
+        }
+
+        /* Adjacent */
+
+        h3 + p{
+            font-size: 18px;
+            color: #0000ff;
+            background-color: rgb(240, 235, 191);
+        }
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+    <h1>Selectors in CSS</h1>
+   
+    <p class="test">
+        We will test all the selectors on this page.
+    </p>
+
+    <p class="test para2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At fuga odit beatae dolorem, quis accusantium ullam. Suscipit aperiam explicabo facere fuga corporis! At non accusamus sit architecto, porro suscipit dolor enim quae et dolores laboriosam magnam facilis! Officiis harum sequi voluptates optio? Hic quas consectetur necessitatibus voluptate doloribus, voluptates aspernatur recusandae? In iste minus minima ipsam, blanditiis impedit veniam deserunt labore adipisci molestias id, molestiae vitae quas architecto pariatur, consectetur animi nesciunt voluptatibus? Ipsum est magnam voluptatibus libero maxime, sint vel, quos error hic, minus eveniet excepturi sunt iste? Ad, voluptatibus. Dolores rerum hic voluptatibus autem, libero quisquam reprehenderit cupiditate adipisci quibusdam voluptates, labore debitis neque a iusto! Aut harum optio ab provident, eaque ducimus magni dolore? Tempore ad natus, illo similique, nemo atque dolorum saepe, esse dignissimos labore nam voluptatem modi commodi! Veritatis dicta repellendus aspernatur ad ducimus tenetur, accusantium repellat, laudantium, consequatur sunt nulla deleniti fugiat animi iusto.
+    </p>
+
+    <p class="test para3">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, odio repellat pariatur architecto id, cumque ratione possimus dolore maiores aut eligendi beatae, quos aliquam ex exercitationem nemo totam eius laborum velit? In repellat nulla vel voluptates voluptas quod vitae pariatur ut consequatur! Quas distinctio laboriosam exercitationem repellat corrupti temporibus iusto magni deleniti vero eveniet provident veritatis hic aliquid atque molestiae tempora sunt quam enim cumque, amet ut fuga molestias itaque? Dolor a veritatis perspiciatis excepturi reiciendis repellendus ut at rerum expedita sint itaque amet laborum iste error et temporibus, in cupiditate recusandae sapiente, rem blanditiis, nisi ea. Accusamus, nihil quae?
+    </p>
+
+    <div id="para-and-list">
+        <p >
+            This is div with id <b>para-and-list</b>. I am mentioning it for my convenience to notice the style application. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugit fuga libero inventore amet dicta ipsa facere repudiandae maxime distinctio?
+        </p>
+
+
+        <div>
+        <ul id="name-list">
+            <li class="names" id="azhar">Azhar Choudhury</li>
+            <li class="names" id="bhrigu">Bhrigu Chakraborty</li>
+            <li class="names" id="bhargav">Bhargav Bhattacharya</li>
+            <li class="names" id="janmajay">Janmajay Gupta</li>
+        </ul>
+        </div>
+    </div>
+
+
+    <ol id="item-list">
+        <li>Books</li>
+        <li>Pens</li>
+        <li>Notebooks</li>
+    </ol>
+
+
+    <div id="child-test">
+
+        <h3>Hello everyone</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repudiandae veniam vel laudantium nam dolorem cupiditate illum provident a fugiat ex, necessitatibus cumque enim unde sint distinctio alias aspernatur? Commodi quis, suscipit perferendis eaque rerum quae ratione quibusdam assumenda corporis nulla non? Amet ad perspiciatis blanditiis libero, ipsa accusamus eveniet?</p>
+        
+        <ul>
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Banana</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium assumenda cupiditate mollitia non minus fugiat blanditiis deserunt veniam vitae accusantium aut quidem asperiores sit, quibusdam alias repellendus! Ipsum, vel iure?</p>
+        
+        <div>
+            <p>
+            Whatever you wish you may write here. Below is a list -
+            </p>
+
+            <ol>
+                <li>Ford</li>
+                <li>Hyundai</li>
+                <li>Kia</li>
+            </ol>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+
+
+

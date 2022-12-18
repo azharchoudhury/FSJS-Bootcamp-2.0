@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs and Form</title>
+</head>
+
+<body>
+
+    <h2>
+        Go to <a href="./index.html">HOME</a>
+       </h2>
+
+    <h1>HTML Forms</h1>
+
+    <p>
+        <b>Form</b> in HTML is an element which creates a document with interactive controls, where the user needs to
+        input the required data and submit it so that the developer or organisation can collect the required data from
+        the user. <br>
+        Everything in a form is actually an input element of different types.
+    </p>
+
+    <br>
+
+    <h2>Form Attributes</h2>
+
+    <p>The HTML Form has different attributes. Let us understand them.</p>
+
+    <h3>Target attribute</h3>
+
+    <p>
+        The <b>target</b> attribute specifies where to display the response which is received after the user submits the
+        form.
+    </p>
+
+    <p>
+        The <b>target</b> attribute can have any of the following values - <br>
+        <ul>
+            <li>
+                <b>_blank</b> = The response is displayed in a new window or tab. We cannot set this to open in a new
+                tab or a window as this depends on the browser settings of the user.
+            </li>
+            <li>
+                <b>_self</b> = The response is displayed in the current window.
+            </li>
+        </ul>
+    </p>
+
+    <h3>Autocomplete attribute</h3>
+
+    <p>
+        The <b>autocomplete</b> attribute specifies whether a form should have autocomplete on or off.
+
+        <br>
+        When autocomplete is on, the browser automatically fills up the fields based on the values that the user has
+        entered before.
+    </p>
+
+    <h2>Form Elements</h2>
+
+    <p>
+        Below are the following HTML form elements :- <br>
+        <ul>
+            <li>
+                <b>label :</b> It defines the label for the form elements.
+            </li>
+            <li>
+                <b>input :</b> It is used to get the input data from the form entered by the user in various types like
+                text, password, email, address etc. by changing the input type.
+            </li>
+            <li>
+                <b>button :</b> It defines a clickable button to execute a functionality or to control other elements.
+            </li>
+            <li>
+                <b>select :</b> It is used to create a drop-down menu.
+            </li>
+            <li>
+                <b>textarea :</b> It is used to get the input of long text content.
+            </li>
+            <li>
+                <b>fieldset :</b> It is used to draw a box around other form elements and group the related data.
+            </li>
+            <li>
+                <b>legend :</b> It defines caption for fieldset elements
+            </li>
+            <li>
+                <b>datalist :</b> It is used to specify pre-defined list options for input controls.
+            </li>
+            <li>
+                <b>output :</b> It is used to display the output of performed calculations.
+            </li>
+            <li>
+                <b>option :</b> It is used to define options in a drop-down list.
+            </li>
+            <li>
+                <b>optgroup :</b> It is used to define group-related options in a drop-down list.
+            </li>
+        </ul>
+    </p>
+
+    <h2>HTML Input types</h2>
+
+    <h3>Text</h3>
+
+    <p>
+        The <b>text</b> input type defines a single-line text input field. <br>
+        Example -
+        <label for="text1">Name</label>
+        <input id="text1" type="text">
+    </p>
+
+    <h3>Password</h3>
+
+    <p>
+        The <b>password</b> input type defines a password field. When the user enters something in the password field,
+        the characters are not visible, instead we can see when the user enters something, it appears in <b>*</b>
+        (asterisk) or <b>•</b> (bullet) form. <br>
+        Example -
+        <label for="pass1">Enter Password</label>
+        <input type="password" id="pass1">
+    </p>
+
+    <h3>Submit</h3>
+
+    <p>
+        The <b>submit</b> input type defines a button for submitting form data to a form handler. <br>
+        This is different from creating a button and labelling it as submitted. The <b>submit</b> input type has the default
+        functionality of submitting the form. <br><br>
+        The <b>submit</b> input type has an attribute <b>value</b> which shows the text on the button.
+        If we omit the <b>submit</b> button's <b>value</b> attribute, the button will get a default text like
+        <b>Submit</b> or <b>Submit Query</b>. <br>
+        Example - <br>
+        with <em>value = Send</em><br>
+        <input type="submit" value="Send">
+        <br>
+        <em>without value attribute</em><br>
+        <input type="submit">
+    </p>
+
+    <h3>Reset</h3>
+
+    <p>
+        The <b>reset</b> input type defines a <b>reset button</b> that will reset all form values to their default
+        values. <br>
+        Example - <input type="reset">
+    </p>
+
+    <h3>Radio</h3>
+
+    <p>
+        The <b>radio</b> input type is generally used in radio groups which is a collection of radio buttons describing
+        a set of related operations. <br><br>
+        With the <b>radio</b> button, the user can select only one of a limited number of choices. <br>
+        Radio buttons are small circles which are filled or highlighted when selected. <br><br>
+        Example - <br>
+        Select any 1 pizza - <br>
+        <input type="radio" name="pizza" id="veg_pizza">
+        <label for="veg_pizza">Veg Pizza</label>
+        <input type="radio" name="pizza" id="chicken_pizza">
+        <label for="chicken_pizza">Chicken Pizza</label>
+        <input type="radio" name="pizza" id="plain_pizza">
+        <label for="plain_pizza">Plain Cheese Pizza</label>
+    </p>
+
+    <h3>Checkbox</h3>
+
+    <p>
+        We have already seen checkboxes in many official government forms or other forms as well. <br>
+        <b>Checkbox</b> are similar to <b>radio</b> buttons but, checkbox are rendered by default as boxes that are
+        ticked or checked when selected. <br>
+        In some browsers, it might appear as a square and in some other browsers, it might have rounded corners.
+        <br><br>
+        Example - <br>
+        Select the toppings - <br>
+        <input type="checkbox" id="tpng1">
+        <label for="tpng1">Pepperoni</label> <br>
+        <input type="checkbox" id="tpng2">
+        <label for="tpng2">Sausage</label> <br>
+        <input type="checkbox" id="tpng3">
+        <label for="tpng3">Onions</label> <br>
+        <input type="checkbox" id="tpng4">
+        <label for="tpng4">Mushroom</label>
+    </p>
+
+
+    <p>
+        <b>Note: </b><mark>The value attribute defines the unique value associated with each radio button. The value is
+            not shown to the user, but is the value that is sent to the server on "submit" to identify which radio
+            button that was selected.</mark>
+    </p>
+
+    <h3>Button</h3>
+
+    <p>
+        The <b>button</b> input type creates a simple push button, which can be programmed by the developer to control
+        custom functionality anywhere on a webpage.
+        <br><br>
+        Example - <br>
+        <input type="button" name="button1" id="btn" value="Click on Me 😃">
+        <br><br>
+        <b>Note:</b>
+        <ol>
+            <li>
+                The text written in the button comes from the <b>value</b> attribute of the <b>input</b> tag.
+            </li>
+            <br>
+            <li>
+                Even though the <b>button</b> input type is still valid to use in HTML but, the newer <b>button</b>
+                element is now the favoured way to create a button. <br>
+                We can insert text between the opening and closing <b>button</b> tags, we can also insert images inside
+                the <b>button</b> element.
+            </li>
+        </ol>
+    </p>
+
+    <p>
+        An example of the <b>button</b> element with text and image inside the <b>button</b> -
+    </p>
+
+    <button>Image here <img src="./pexels-sora-13915493.jpg" alt="anything" width="100px" height="60px"></button>
+
+
+    <h3>Color</h3>
+
+    <p>
+        The <b>color</b> input type is used for input fields that should contain a color. <br>
+        Depending on the browser support, a color picker will show up in the input field. <br><br>
+
+        Example - <br>
+        <label for="color1">Pick your color</label>
+        <input type="color" id="color1">
+
+        <br>
+        <b>NOTE : </b> The default value for the <b>color</b> input type is <b>black</b> <br>
+        If we want to give a specific color, we can use the <b>value</b> attribute and specify the <b>color code</b> in
+        the value.
+
+        <br><br>
+        Example -
+        <label for="color2">The custom color is green</label>
+        <input type="color" id="color2" value="#00D84A">
+
+    </p>
+
+
+
+    <h3>Date</h3>
+
+    <p>
+        The <b>date</b> input type creates an input field that lets the user enter a date, either with a textbox that
+        validates the input or a special date picker interface depending on the browser support.
+
+        <br><br>
+        Example - <br>
+        <label for="date1">Choose the date</label>
+        <input type="date">
+
+        <br><br>
+        <b>Note : </b> We can set the maximum and minimum limit of the date for the user to choose with the <b>max</b>
+        and the <b>min</b> attributes.
+        <br>
+        Example -
+        <label for="date2">Choose the date for 2022</label>
+        <input type="date" max="2022-12-31" min="2022-01-01">
+    </p>
+
+
+    <h3>Datetime-local</h3>
+
+    <p>
+        The <b>Datetime-local</b> input type creates a date and time input field with no timezone. A date picker
+        interface will show up in the input field depending on the browser support.
+        <br><br>
+        Example -
+        <label for="date3">Choose the date and time</label>
+        <input type="datetime-local">
+    </p>
+
+    <h3>Time</h3>
+
+    <p>
+        The <b>time</b> input type creates a <b>time</b> input field designed to let the user easily enter a time with
+        hours and minutes, and seconds optionally.
+        <br><br>
+        The UI of the control varies from browser to browser. It will be different in chrome, firefox and safari.
+
+        <br><br>
+        Example -
+        <label for="time1">Select your convenient time</label>
+        <input type="time">
+    </p>
+
+
+    <h3>URL</h3>
+
+    <p>
+        The <b>URL</b> input type is used for creating an input field that should contain a URL address only.
+        <br>
+        The URL field can be automatically validated when submitted, depending on browser support.
+
+        <br><br>
+        Example -
+        <label for="url1">Enter the URL</label>
+        <input type="URL" id="url1">
+    </p>
+
+    <h3>Range</h3>
+
+    <p>
+        The <b>range</b> input type creates a slider control. It is used for entering a number whose exact value is not
+        important.
+        <br>
+        The default range in 0 to 100. But, we can customise the limit with the <b>max</b>, <b>min</b>, and <b>step</b>
+        attributes.
+
+        <br><br>
+        Example - <br><br>
+        <label for="vol1">Volume</label><br>
+        <input type="range" id="vol1">
+        <br>
+        <input type="range" max="10" min="0" step="2"><br>
+        <label for="bass1">Bass</label>
+    </p>
+
+    <h3>Image</h3>
+
+    <p>
+        The <b>image</b> input type creates an image as a submit button. <br>
+        The path to the image is specified in the <b>src</b> attribute.
+        <br><br>
+        Example - <br><br>
+        <input type="image" src="./Upload-Transparent.png" height="70" width="70" alt="Submit">
+    </p>
+
+
+    <h3>Tel</h3>
+
+    <p>
+        The <b>tel</b> input type is used to create a field for entering a telephone number.
+
+        <br><br>
+        Example -
+        <br>
+        <label for="tel1">Contact Number : +91 </label>
+        <input type="tel" id="tel1" pattern="[0-9]{5}-[0-9]{5}">
+        <br>
+        <small>Format: 98765-01234</small>
+    </p>
+
+
+
+    <h3>Email</h3>
+
+    <p>
+        The <b>email</b> input type is used to create an input field that should contain only an e-mail address.
+        <br>
+        The e-mail address can be automatically validated when submitted depending on the browser support.
+        <br><br>
+        Example - <br>
+        <label for="email1">Enter your e-mail id: </label>
+        <input type="email" id="email1">
+    </p>
+
+    <h3>File</h3>
+
+    <p>
+        The <b>file</b> input type creates a file-select field and a <b>Browse</b> button for file uploads from the
+        users' device storage. The file can be uploaded to a server with form submission or with JS manipulation.
+        <br><br>
+        Example -
+        <br><br>
+        <label for="file1">Upload your document: </label><br>
+        <input type="file" id="file1">
+    </p>
+
+    <h3>Hidden</h3>
+
+    <p>
+        The <b>hidden</b> input type creates a hidden input field which is not visible to the user when the form is
+        submitted. <br>
+        Hidden inputs are completely invisible in the rendered page, and there is no way to make them visible in the
+        page's content.
+        <br>
+        The developer sends the unique or secured information of the hidden input to the server through the <b>value</b>
+        attribute.
+        <br><br>
+        For example- I can pass the customers' unique ID or the serial number to the server without the knowledge of the
+        user.
+
+        <br><br>
+        <label for="username">Name : </label><br>
+        <input type="text" id="username"><br><br>
+
+        <input type="text" id="contact_no"><br>
+        <label for="contact_no">Contact Number</label>
+
+        <br><br>
+        <input type="button" value="Submit">
+
+        <input type="hidden" id="customID" value="13572">
+
+    </p>
+
+
+    <h2>List of attributes with brief description -</h2>
+    <p>
+        <small>
+            <b>Source: </b> GeeksforGeeks
+        </small>
+    </p>
+
+    <ul>
+        <li>
+            <b>type: </b> The type attribute is used to specify the type of the input element. Its default value is
+            text.
+        </li><br>
+        <li>
+            <b>value: </b> The value attribute is used to specify the value of the input element.
+        </li><br>
+        <li>
+            <b>placeholder: </b> Placeholder attribute is used to specify hint that describes the expected value of an
+            input field.
+        </li><br>
+        <li>
+            <b>name: </b> The name attribute is used to specify the name of the input element.
+        </li><br>
+        <li>
+            <b>alt: </b> The alt attribute is used to provide alternate text for the user, if they cannot view the
+            image.
+        </li><br>
+        <li>
+            <b>autofocus: </b> Autofocus attribute specifies that an element should automatically get focus when the
+            page loads.
+        </li><br>
+        <li>
+            <b>checked: </b> The checked attribute specifies that an element should be pre-selected (checked) when the
+            page loads. The checked attribute can be used with <em>input type=”checkbox”</em> and <em>input type=”radio”
+                > </em>.
+        </li><br>
+        <li>
+            <b>disabled: </b> The disabled attribute specifies that the element should be disabled. The disabled
+            attribute can be set to keep a user from using the <b>input</b> element until some other condition has been
+            met.
+        </li><br>
+        <li>
+            <b>form: </b> The form attribute is used to specify one or more forms to which the <b>input</b> element
+            belongs to.
+        </li><br>
+        <li>
+            <b>max: </b> The max attribute is used to specify the maximum value for an <b>input</b> element.
+        </li><br>
+        <li>
+            <b>required: </b> The required attribute specifies that an input field must be filled out before submitting
+            the form.
+        </li><br>
+        <li>
+            <b>readonly: </b> The readonly attribute specifies that an input field is read-only. A read-only input field
+            cannot be modified. A form will still submit an input field that is readonly, but will not submit an input
+            field that is disabled.
+        </li><br>
+        <li>
+            <b>accept: </b> This property is used to specifies the types of files that the server accepts.
+        </li><br>
+        <li>
+            <b>align: </b> This property is used to specifies the alignment of an image input.
+        </li><br>
+        <li>
+            <b>autocomplete: </b> This property is used to specifies whether an <b>input</b> element should have
+            autocomplete enabled.
+        </li><br>
+        <li>
+            <b>dirname: </b> This property is used to specifies that the text direction will be submitted.
+        </li><br>
+        <li>
+            <b>formaction: </b> This property is used to specifies the URL of the file that will process the input
+            control when the form is submitted (for type=”submit” and type=”image”)
+        </li><br>
+        <li>
+            <b>formenctype: </b> This property is used to specifies how the form-data should be encoded when submitting
+            it to the server (for type=”submit” and type=”image”)
+        </li><br>
+        <li>
+            <b>formmethod: </b> This property is used to defines the HTTP method for sending data to the action URL (for
+            type=”submit” and type=”image”)
+        </li><br>
+        <li>
+            <b>formnovalidate: </b> This property is used to defines that form elements should not be validated when
+            submitted
+        </li><br>
+        <li>
+            <b>formtarget: </b> This property is used to specifies where to display the response that is received after
+            submitting the form (for type=”submit” and type=”image”)
+        </li><br>
+        <li>
+            <b>height: </b> This property is used to specifies the height of an <b>input</b> element (only for
+            type=”image”)
+        </li><br>
+        <li>
+            <b>list: </b> This property is used to refers to a <datalist> element that contains pre-defined options for
+                an <b>input</b> element
+        </li><br>
+        <li>
+            <b>maxlength: </b> This property is used to specifies the maximum number of characters allowed in an
+            <b>input</b> element
+        </li><br>
+        <li>
+            <b>min: </b> This property is used to specifies a minimum value for an <b>input</b> element
+        </li><br>
+        <li>
+            <b>multiple: </b> This property is used to specifies that a user can enter more than one value in an
+            <b>input</b> element
+        </li><br>
+        <li>
+            <b>pattern: </b> This property is used to specifies a regular expression that an <b>input</b> element’s
+            value is checked against
+        </li><br>
+        <li>
+            <b>size: </b> This property is used to specifies the width, in characters, of an <b>input</b> element
+        </li><br>
+        <li>
+            <b>src: </b> This property is used to specifies the URL of the image to use as a submit button (only for
+            type=”image”)
+        </li><br>
+        <li>
+            <b>step: </b> This property is used to specifies the legal number intervals for an input field
+        </li><br>
+        <li>
+            <b>width: </b> This property is used to specifies the width of an <b>input</b> element (only for
+            type=”image”)
+        </li>
+    </ul>
+
+
+    
+
+</body>
+
+</html>

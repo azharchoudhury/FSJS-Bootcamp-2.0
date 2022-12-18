@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 30px 50px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-img{
+    width: 150px;
+}
+
+.list{
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#home{
+    color: #22c55e;
+    font-weight: 600;
+}
+
+main{
+    display: flex;
+}
+
+.left-section{
+    width: 50%;
+    margin-top: 60px;
+}
+
+.main-heading{
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.subtitle{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 300;
+    width: 90%;
+    color:#6b7280 ;
+}
+
+.btn{
+    margin-top: 25px;
+    padding: 15px 40px;
+    border-radius: 40px;
+    border-style: none;
+    font-size: 26px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #10b981;
+}
+
+.orange-angle{
+    position: relative;
+    left: 570px;
+    bottom: 60px;
+}
+
+.steth{
+    position: absolute;
+    top: 60px;
+    left: 250px;
+    width: 580px;
+}
+
+.mouse{
+    position: absolute;
+    left: 670px;
+    top: 565px;
+}
+
+.right-section{
+    width: 50%;
+    display: flex;
+}
+
+.green-circle{
+    position: absolute;
+    right: 20px;
+    /* top: 220px; */
+    bottom: 70px;
+    width: 420px;
+}
+
+.orange-circle{
+    position: absolute;
+    right: 0;
+    /* top: 270px; */
+    bottom: 80px;
+    width: 380px;
+}
+
+.doctor-img{
+    position: absolute;
+    width: 450px;
+    /* top: 110px; */
+    bottom: 0;
+    right: 20px;
+}

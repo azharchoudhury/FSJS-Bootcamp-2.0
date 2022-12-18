@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting</title>
+</head>
+
+<body>
+
+    <h2>
+        Go to <a href="./index.html">HOME</a>
+       </h2>
+
+    <h1>Text Formatting in HTML</h1>
+
+    <h2>Bold and Strong elements</h2>
+
+    <p>The <b>bold</b> and the <b>strong</b> elements look the same when applied to any text in HTML. But, they don't
+        have the same significance. Let us understand it more elaborately.</p>
+
+    <p>The <b>bold</b> element, which is written with the <b>b</b> tag just makes the text look <b>bold</b> and draws
+        the attention. It just functions visually and doesn't have any more significance than this. It is just used for
+        styling which we can do better with CSS and are supposed to do all the styling with CSS only.</p>
+
+    <p>The <strong>strong</strong> element, which is written with the <b>strong</b> tag, on the other hand has a
+        semantic function. It looks the same as the bold element visually, but it tells the browser that the text
+        labelled as strong has strong importance. It also helps in accessibility for visually impaired people.</p>
+
+    <h2>Italics and Emphasis elements</h2>
+
+    <p>The <b><i>italic</i></b> element which is written with the <b>i</b> tag again works just like the <b>b</b>
+        element. The <b>i</b> element doesn't have any significance other than styling texts in italics. </p>
+
+    <p>The <b><em>emphasis</em></b> element, which is written with the <b><em>em</em></b> tag, on the other hand has a
+        semantic function like the <b>strong</b> tag. It is used to define emphasized text. The content inside the
+        <b><em>em</em></b> tag is displayed in <b>italic</b> by default.</p>
+
+    <h2>Small element</h2>
+    <p>The <b>small</b> element makes the text smaller relative to the size it was before using the tag. It generally
+        represents side-comments and small print, like copyright and legal text. <br> For example - <small>This sentence
+            is written within the small tags</small> <br> <small><b>Note: We don't use this for styling rather we use
+                CSS for all the styling of texts.</b></small></p>
+
+    <h2>Big element</h2>
+    <p>The <b>big</b> element makes the text larger relative to the size it was before using the tag. This is actually
+        deprecated and is not encouraged to use in HTML as we do the styling of texts with CSS. But, for information, I
+        have put it along with the explanation of the <b>small</b> element. <br>For example - <big>This sentence is written
+            within the <b>big</b> tags</big> </p>
+
+    <h2>Mark element</h2>
+
+    <p>The <b>mark</b> element defines that the text written with the mark tags should be marked or highlighted. Again,
+        we don't need to do this with the mark element rather we can use <b>span</b> in CSS for highlighting or marking
+        texts. <br> For example - <mark>People with valid ID proof only shall be allowed to enter the premise.</mark>
+    </p>
+
+
+    <h2>Insert element</h2>
+
+    <p>The <b>insert</b> element, which is written with the <b>ins</b> tag, defines that the text enclosed within the
+        <b>ins</b> tags have been inserted into a document. It underlines the text within the <b>ins</b> tags but it is a
+        semantic tag and is not just used for underlining texts. <br>For example - The missing word <ins>required</ins>
+        has been successfully inserted into the file.</p>
+
+    <h2>Underline element</h2>
+
+    <p>The <b>underline</b> element, which is written within the <b>u</b> tags, has been deprecated and is discouraged
+        to use for underlining texts. We should use CSS for underlining texts. <br>For example - This is a
+        <u>precious</u> gift from him.</p>
+
+
+    <h2>Delete element</h2>
+
+    <p>The <b>delete</b> element, which is written within the <b>del</b> tags, defines that the text has been deleted
+        from a document. The browser strikes a line through the texts enclosed within the <b>del</b> tags. This is a
+        semantic tag and should not be used for styling purposes such as strikethrough a text. <br>For example - The
+        captain of the team is <del>Hrithik</del> Vivek.</p>
+
+    <h2>Subscript element</h2>
+
+    <p>The <b>subscript</b> element, which is written within the <b>sub</b> tags, specifies the text enclosed within the
+        <b>sub</b> tags should be displayed as subscript and should only be used for typographical reasons only rather
+        than styling or appearance purposes. <br> For example - H<sub>2</sub>0 + CO<sub>2</sub> --->
+        H<sub>2</sub>CO<sub>3</sub></p>
+
+
+    <h2>Superscript element</h2>
+
+    <p>The <b>superscript</b> element, which is written within the <b>sup</b> tags, specifies the text enclosed within
+        the <b>sup</b> tags should be displayed as superscript and should only be used for typographical reasons only
+        rather than styling or appearance purposes. <br> For example - 4<sup>2</sup> = 16</p>
+
+    <h2>Block Quotation element</h2>
+    <p>The blockquote tag in HTML is used to display long quotations that is, a section which is quoted from another
+        source. It changes the alignment of the text enclosed within the <b>blockquote</b> tags to make it unique from
+        others. It contains both opening and closing tags. We can use elements like heading, list, paragraph and others
+        inside the <b>blockquote</b> tag <br> It has an attribute called <b>cite</b> which is used to specify the source
+        of the quotation. <br> The value of the <b>cite</b> attribute is <b>URL</b> which specifies the source of the
+        quotation. <br> There are two possible values of the <b>URL :</b> <br>
+        <ul>
+            <li><b>absolute URL :</b> It points to another website.</li>
+            <li><b>relative URL :</b> It points to a file within a website.</li>
+        </ul>
+        <br> Example of block quotation -
+        <br>
+        <blockquote cite="https://opensource.google/">
+            <p>
+                Featured events
+                Google Open Source sponsors a variety of events across open source, from local meetups to industry-wide
+                conferences, as well as hosting own our events to share Google expertise. We strive to support
+                collaborative and welcoming spaces—both in-person and at our virtual events. Come say 'hi'! We'd love to
+                meet you.
+            </p>
+        </blockquote>
+    </p>
+
+    <h2>Inline Quotation element</h2>
+
+    <p>The <b>inline quotation element</b>, which is written by using the <b>q</b> tag, indicates that the enclosed text
+        is a short inline quotation. <br> Most of the modern browsers implement this by surrounding the text in
+        quotation marks. This element is actually used for short quotations only that don't require paragraph breaks;
+        for long quotations, we should use the <b>blockquote</b> element.
+        <br>For example - <br> <q>In order to write about life first you must live it.</q>– Ernest Hemingway
+    </p>
+
+
+    <h2>Address element</h2>
+
+    <p>The <b>address</b> element, which is written within the <b>address</b> tags, defines the contact information of
+        the author or the owner of a document or an article. <br> The contact information can be an email address, URL,
+        physical address, phone number, social media handle etc. <br>The text in the <b>address</b> element usually
+        renders in <em>italic</em>, and browsers will always add a line break before and after the <b>address</b>
+        element.
+        <br> For example - <br>
+        <address>
+            Written by - Azhar Choudhury. <br>
+            Contact - <br>
+            <a href="azharmehmud11@gmail.com">azharmehmud11@gmail.com</a> <br>
+            <a href="7002712345">7002712345</a>
+        </address>
+    </p>
+
+    <h2>Cite element</h2>
+
+    <p>The <b>cite</b> element, which is written within the <b>cite</b> tags, is used to define the title of a work.
+        <br> It displays the text in italics. <br> For example - <cite>Introduction to Web and HTML</cite></p>
+
+    <h2>Bi-Directional Override (bdo)</h2>
+
+    <p>The <b>Bi-directional Override (bdo)</b> element overrides the current direction of the text written, so that the
+        text within the <b>bdo</b> tags is rendered in a different direction. <br>
+        For example - Coding -> <bdo dir="rtl">Coding</bdo>
+    </p>
+
+
+
+</body>
+
+</html>

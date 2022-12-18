@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Video in HTML</title>
+</head>
+
+<body>
+
+    <h2>
+        Go to <a href="./index.html">HOME</a>
+    </h2>
+
+
+    <h1>Audio and Video in HTML</h1>
+
+    <h2>Audio</h2>
+    <p>
+        The <b>audio</b> element is used to embed sound content or audio files in HTML documents. <br>
+        We need to put the source of the audio file with the <b>src</b> attribute.
+
+        But, if we only use the <b>audio</b> tags and put the source of the audio file, we will still not be able to see
+        anything on the browser. The audio file will be loaded but there won't be anything visible. <br>
+        For playing the audio and controlling the audio file, we need to put another attribute with the <b>audio</b>
+        tag.
+        Let us see some useful attributes of the <b>audio</b> tag.
+    </p>
+
+    <h3>controls</h2>
+
+        <p>
+            The <b>controls</b> attribute allows the user to see the controls offered by the browser to control audio
+            playback, control the volume, seek, and pause or resume the playback.
+        </p>
+
+        <h3>muted</h2>
+
+            <p>
+                The <b>muted</b> attribute mutes the audio by default when the page loads. This is applied because some
+                users do not want the audio to be played automatically when the page loads. So, with the <b>muted</b>
+                attribute, the audio won't play when the browser loads the page and allows the user to unmute and listen
+                to the audio.
+
+                <br>
+
+                The text between the <b>audio</b> tags will only be displayed in browsers that do not support the
+                <b>audio</b> element.
+
+
+            </p>
+
+            <p>Here is an audio which you can play and listen to 👇🏻</p>
+
+            <div style="text-align: center;">
+                <!-- <audio src="./05 Nazar Laaye.mp3" controls>Listen to Nazar Laaye</audio> -->
+
+                <audio controls autoplay muted>
+                    <source src="./05 Nazar Laaye.mp3">
+                </audio>
+
+            </div>
+
+            <br><br>
+
+            <h2>Video</h2>
+
+            <p>
+                The <b>video</b> element allows the developer to embed a media player which supports video playback in
+                the document such as a movie clip or music video or tutorial or any other video streams.. <br><br>
+
+                The <b>video</b> tag needs the <b>src</b> attribute to get the source of the video file. The source can
+                be a file in the local storage or the link of a video on the web.
+
+                The text between the <b>video</b> tags will only be displayed in browsers that do not support the
+                <b>video</b> element.
+
+            </p>
+
+            <p>Let us look at a video clip added with the <b>video</b> tags 👇🏻</p>
+
+            <div style="text-align: center;">
+
+                <video controls autoplay muted width="600px" height="400px">
+                    <source src="./pexels-sevie-7125268.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+            <br><br>
+
+            <p>
+                <b>Remember: </b> The <b>autoplay</b> doesn't work with some browsers if the audio or video is not
+                <b>muted</b>. <br>
+                Because browsers have now become smarter and know that if the audio or video is unmuted, auto-playing
+                the audio/video might cause bad user experience. <br>
+                So, the <b>autoplay</b> works when the <b>muted</b> attribute is applied on the <b>audio/video</b> as it
+                knows that playing the video without the audio might not give the user an unpleasant experience.
+            </p>
+
+
+
+
+
+</body>
+
+</html>

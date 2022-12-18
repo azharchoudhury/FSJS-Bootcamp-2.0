@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <h2>
+        Go to <a href="./index.html">HOME</a>
+       </h2>
+
+    <h1>Registration Form</h1>
+    <form>
+        <label for="name1"><strong>Name:</strong> </label>
+        <input type="text" id="name1" placeholder="Enter your name">
+        <br><br>
+        <label for="email1"><strong>Email:</strong> </label>
+        <input type="email" id="email1" placeholder="Enter your email">
+        <br><br>
+        <label for="password1"><strong>Password:</strong> </label>
+        <input type="password" id="password1" placeholder="Enter your password">
+        <br><br>
+        <label for="contact1"><strong>Contact No.: +91</strong></label>
+        <input type="tel" pattern="[0-9]{5}-[0-9]{5}" placeholder="98765-43210">
+        <br><br>
+        
+        <strong>Select Location: </strong>
+        <select name="locations">
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Guwahati">Guwahati</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Lucknow">Lucknow</option>
+        </select>
+
+        <br><br>
+        
+        <strong>Please select the items you would like to add to the cart: </strong> <br>
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">Water Sipper</label><br>
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">Mug</label><br>
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3">Notebook</label><br>
+        <input type="checkbox" id="checkbox4">
+        <label for="checkbox4">Pen Holder</label><br>
+        <input type="checkbox" id="checkbox5">
+        <label for="checkbox5">Sticky Notes</label><br>
+        <input type="checkbox" id="checkbox6">
+        <label for="checkbox6">Study Lamp</label><br>
+
+        <br>
+
+        <strong>Please select a day for your consultation with an expert:</strong>
+        <br>
+        <input type="radio" name="days" id="day1">
+        <label for="day1">Monday</label><br>
+        <input type="radio" name="days" id="day2">
+        <label for="day2">Tuesday</label><br>
+        <input type="radio" name="days" id="day3">
+        <label for="day3">Wednesday</label><br>
+        <input type="radio" name="days" id="day4">
+        <label for="day4">Thursday</label><br>
+        <input type="radio" name="days" id="day5">
+        <label for="day5">Friday</label><br>
+        <input type="radio" name="days" id="day6">
+        <label for="day6">Saturday</label><br>
+        <input type="radio" name="days" id="day7">
+        <label for="day7">Sunday</label><br>
+
+        <br><br>
+
+        <strong> How good do you think you are at communicating with people? </strong>
+        <br>
+        Weak <input type="range"> Strong
+
+        <br><br>
+
+        <strong> Your favorite color : </strong>
+        <input type="color" value="#5A20CB">
+
+        <br><br>
+
+        <strong>Choose your date and time of consultation: </strong><br>
+        <input type="datetime-local">
+
+        <br><br>
+        
+        <label for="file1"><strong>Upload your photo: </strong></label><br>
+        <input type="file" >
+
+        <br><br>
+
+        <label for="date1"><strong>Date of submission: </strong></label>
+        <input type="date" id="date1">
+        
+        <br><br>
+
+        <label for="time1"><strong>Time of submission: </strong></label>
+        <input type="time" id="time1">
+
+        <br><br>
+
+        <strong>Additional Comments: <br></strong>
+        <textarea name="comments" id="comment1" cols="30" rows="10">
+        </textarea>
+
+        <br><br><br><br>
+
+        <input type="reset">
+        <input type="submit">
+
+    </form>
+
+
+</body>
+</html>

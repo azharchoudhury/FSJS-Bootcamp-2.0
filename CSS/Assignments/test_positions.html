@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Positions</title>
+</head>
+
+<style>
+
+    body{
+        height: 1500px;
+    }
+
+    #box-one{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        border: 1px solid #334155;
+        background-color: #f3f4f6;
+        padding: 5px;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    #box-two{
+        position: static;
+        border: 1px solid #334155;
+        background-color: #fed7aa;
+        padding: 5px;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    #float{
+        border: 1px solid #334155;
+        height: 80px;
+        width: 70px;
+        float: right;
+    }
+</style>
+
+<body>
+
+<div class="container">
+  <p id="box-one">One</p>
+  <p id="box-two">Two</p>
+</div>
+<p id="float">Floating..</p>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HTML</title>
+</head>
+
+<body>
+
+    <h2>
+        Go to <a href="./index.html">HOME</a>
+       </h2>
+
+    <h1>HTML Tables</h1>
+
+    <p>The <b>table</b> element in HTML is used to create tables which allows the web developers to represent tabular
+        data. <br>
+        It consists of rows and columns of cells containing data. </p>
+
+
+    <h2>Table Rows</h2>
+
+    <p>The <b>table row</b>, which is written with the <b>tr</b> tag, defines a row in an HTML table. <br> A <b>tr</b>
+        element contains one or more <b>th</b> or <b>td</b> elements.</p>
+
+    <h2>Table Headers</h2>
+
+    <p>The <b>table header</b>, which is written within the <b>th</b> tags, defines a header cell in an HTML table. <br>
+        An HTML table has two kinds of cells : <br>
+        <ol>
+            <li><b>Header cells</b>, which contains header information and is created with the <b>th</b> element.</li>
+            <li><b>Data cells</b>, which contains the data and is created with the <b>td</b> element.</li>
+        </ol>
+    </p>
+
+
+    <h2>Table Data</h2>
+
+    <p>The <b>table data</b> element, which is written within the <b>td</b> tags defines a standard data cell in an HTML
+        table.</p>
+
+  
+
+
+        <h2>Rowspan attribute</h2>
+
+        <p>The <b>rowspan</b> is an attribute in HTML which specifies the number of rows a cell should span that is, if a row spans two rows, it means that the row will take up the space of two rows in that table. <br> 
+        In other words, it provides the same functionality as <b>Merge Cells</b> in <b>Microsoft Excel</b> or any other <b>spreadsheet</b> program. <br>
+        The <b>rowspan</b> attribute can be used with the <b>th</b> and <b>td</b> elements in an HTML table.
+        <br>
+        The value of the <b>rowspan</b> attribute is a <b>number</b> which specifies the number of rows that a cell should span. The value must be an <b>integer</b>.
+        <br>
+        </p>
+
+        <h2>Colspan attribute</h2>
+
+        <p>The <b>colspan</b> is an attribute in HTML which specifies the number of columns a cell should span that is, if a column span two columns, it means that the column will take up the space of two columns in that table. <br> 
+        In other words, it provides the same functionality as <b>Merge Cells</b> in <b>Microsoft Excel</b> or any other <b>spreadsheet</b> program. <br>
+        The <b>colspan</b> attribute can be used with the <b>th</b> and <b>td</b> elements in an HTML table.
+        <br>
+        The value of the <b>colspan</b> attribute is a <b>number</b> which specifies the number of columns that a cell should span. The value must be an <b>integer</b>. 
+        <br>
+        </p>
+
+        <h2>Inline Frame</h2>
+
+        <p>The <b>Inline Frame</b> which is also called as <b>iFrame</b>. The <b>iframe</b> tag defines a rectangular area within the document in which the browser allows developers to display a seperate document. It is used to embed another document within the current HTML document. <br>
+        In other words, the <b>iframe</b> is basically used to show a webpage inside the current webpage. The <b>src</b> attribute is used to specify the <b>URL</b> of the document that occupies the frame.
+        <br>
+        A common example is that we have seen in many webpages where there are a lot of youtube videos in different webpages. When we click on the play button of the video, it actually plays on Youtube instead of any different video player. That video is actually embedded in that webpage by the developer.
+        </p>
+
+        <br><br>
+        <p>Let us create a table now with all the tags discussed above. </p>
+
+    <!-- Table 1 -->
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Interest</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Azhar</td>
+            <td>Music</td>
+            <td>Silchar</td>
+        </tr>
+        <tr>
+            <td>Bhargav</td>
+            <td>Acting</td>
+            <td>Silchar</td>
+        </tr>
+    </table>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <br>
+
+    <!-- Table 2 -->
+    <table border style="border-collapse: collapse; text-align: center;" align="center" cellpadding="15">
+        <tr>
+            <th colspan="7" align="center">Time Table For Class VII</th>
+        </tr>
+        <tr>
+            <th>Period</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>English</td>
+            <td>English</td>
+            <td>English</td>
+            <td>English</td>
+            <td>English</td>
+            <td>English</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Maths</td>
+            <td>Maths</td>
+            <td>Maths</td>
+            <td>Maths</td>
+            <td>Maths</td>
+            <td>Maths</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Science</td>
+            <td>Science</td>
+            <td>Science</td>
+            <td>Science</td>
+            <td>Science</td>
+            <td>Science</td>
+        </tr>
+
+        <tr>
+            <td colspan="7" align="center"><b>RECESS</b></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>S.Sc</td>
+            <td>S.Sc</td>
+            <td>S.Sc</td>
+            <td>S.Sc</td>
+            <td>S.Sc</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Elective</td>
+            <td>Elective</td>
+            <td>Elective</td>
+            <td>Elective</td>
+            <td>Elective</td>
+        </tr>
+
+    </table>
+
+    <br><br>
+    <hr>
+    <hr>
+    <hr>
+
+
+    <table border style="border-collapse: collapse; text-align: center;" align="center" cellpadding="15">
+        <tr>
+            <th colspan="3">Content Table</th>
+        </tr>
+
+        <tr>
+            <th>Sr No.</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Content</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><b>Perfect chance to contribute in open source | Rowy</b></td>
+            <td rowspan="5" align="center"><b>Hitesh Choudhary</b></td>
+            <td><iframe src="https://www.youtube.com/embed/tNis9AuUky4" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen width="450px" height="250px""></iframe></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td><b>How to build docker image for nodejs apps</b></td>
+            <td><iframe src=" https://www.youtube.com/embed/DQJNtDm5qy0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen width="450px" height="250px"></iframe></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td><b>How to build docker image for python flask app</b></td>
+            <td><iframe width="450px" height="250px" src="https://www.youtube.com/embed/0eMU23VyzR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td><b>8 point resume check list</b></td>
+            <td><iframe width="450" height="250" src="https://www.youtube.com/embed/Ot5CHVwZ_NE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td><b>SwiftUI Crash Course</b></td>
+            <td><iframe width="450" height="250" src="https://www.youtube.com/embed/hBNhH28-dBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+        </tr>
+
+        </table>
+
+
+
+</body>
+
+</html>
