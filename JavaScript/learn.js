@@ -142,7 +142,7 @@ else if(age<18){
     console.log("You can have the minor access. Please bring your guardian along with you..")
 }
 
-// switch
+// switch case
 
 let day = 4;
 
@@ -168,8 +168,81 @@ switch(day){
     case 7:
         console.log("Saturday");
         break;
+    default:
+        console.log("Invalid");
 }
+
+
+//ternary operator
+
+// Condtion ? True : False
+
+
+5 < 7 ? console.log("It is true") : console.log("It is false")
 
 
 */
 
+
+/*
+//Arrays and Objects
+
+let friends = ['Abhijnan' , 'Bhargav' , 'Chiradeep', 'Abhishek', 'Janmajay', 'Shubhrojit' , 'Swami' , 'Hrithik' , 'Vivek' , 'Guddu'];
+
+console.log(friends);
+
+for(let i =0; i<friends.length; i++){
+    console.log(friends[i]);
+}
+
+
+
+let accountDetails = {
+    name : "Azhar Choudhury",
+    age : 25,
+    profession : "Software Engineer",
+    contactNumber : 9543216780,
+    balance : 9542200,
+    city : "Silchar"
+};
+
+console.log(accountDetails);
+console.log(accountDetails.name);
+console.log(accountDetails.profession);
+
+
+const myDate = new Date();
+console.log(myDate.toString());
+console.log(myDate.getFullYear());
+console.log(myDate.getMonth()); // month starts from 0 and ends in 11
+console.log(myDate.getDay()); //day starts from 0 i.e. Sunday is at 0 and Saturday is at 6
+console.log(myDate.getTime()); //the time shown will be in miliseconds
+console.log(myDate.getHours()); //it will be shown in 24 hours format
+console.log(myDate.getMinutes());
+console.log(myDate.getSeconds());
+
+
+const piValue = Math.PI;    //access the value of PI variable from the Math object
+console.log(piValue);
+
+console.log(Math.round(piValue));
+console.log(Math.round(5.765));
+console.log(Math.round(5.365));
+
+
+console.log(Math.floor(9.5));   //the value will decrease
+console.log(Math.ceil(9.5));    //the value will increase
+
+*/
+
+console.log(Math.max(10,4,22,189,1,10,999));
+console.log(Math.min(10,4,22,189,1,10,999));
+
+console.log(Math.random()); //this will always give a random value from 0 to 0.9999999999 (0-1)
+
+console.log(Math.random() * 10); //this will give values more than 1 but limited to the result of 0-0.999999 * (number)
+
+console.log(Math.random() * 50);
+console.log(Math.round(Math.random() * 51)); //this will round off the random number
+console.log(Math.pow(3, 2));
+console.log(Math.log(2));
