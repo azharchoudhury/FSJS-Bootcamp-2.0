@@ -8,15 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <!-- Navigation bar -->
     <head>
-        <nav class="bg-stone-800 px-5 flex justify-around items-center" >
+        <nav class="bg-[#2c2c32;] px-5 flex justify-around items-center" >
             <div class="flex gap-x-3 items-center">
 
             <img class="w-6 h-6" src="./Assets/visual-studio-code-icon.png" alt="VS Code icon">
-            <p class="text-white text-[21px]">Visual Studio Code</p>
+            <p class="text-white text-[20px] font-extralight">Visual Studio Code</p>
             
             <div>
-                <ul class="text-zinc-400 font-light flex gap-x-5 ml-5">
+                <ul class="text-zinc-400 font-extralight text-[16px] flex gap-x-5 ml-5">
                     <li>Docs</li>
                     <li>Updates</li>
                     <li>Blog</li>
@@ -30,9 +32,10 @@
 
             <div class="flex items-center gap-x-(-1)">
                 <img src="./Assets/search.svg" alt="Search icon" class="h-4 relative left-8">
+
                 <input type="text" placeholder="Search Docs" class="font-extralight bg-zinc-700	w-[180px] px-5 py-3 text-slate-50 placeholder-gray-100 text-center placeholder:text-sm">
 
-                <button class="text-white bg-blue-500/80 px-6 py-3">
+                <button class="text-white bg-[#0066b8] px-5 py-3">
                     <span class="text-white mr-2">⤓</span>Download
                 </button>
             </div>
@@ -40,12 +43,58 @@
         </nav>
     </head>
     
-    <div class="bg-black py-3">
+    <div class="bg-[#25252B;] py-3">
         <p class="text-center text-zinc-400">For<span class="text-blue-500"> education purpose</span> only. </p>
     </div>
 
 
+    <!-- Main contents -->
+
     <main>
+
+    <div class="flex bg-[#2c2c32;]">
+
+        <!-- Left section -->
+
+        <section class="w-[40%] bg-[#2c2c32;] mt-[50px]">
+            <div>
+
+                <!-- Headings -->
+                <div class="leading-[3.5rem] text-center">
+                    <p class="text-white text-[50px] font-thin">Code editing.</p>
+                    <p class="text-white text-[48px]">Redefined.</p>
+                </div>
+
+                <!-- Subtitle -->
+                <p class="text-center font-light text-[18px] text-zinc-400 mt-2 mb-6">Free. Built on open source. Runs everywhere.</p>
+
+                <!-- Button -->
+                <div class="flex justify-center gap-0.5">
+                    <!-- button-1 -->
+                    <button class="bg-[#0066b8] px-3 py-2">
+                        <p class="text-[18px] font-medium text-white">Download Mac Universal</p>
+                        <p class="text-white font-extralight text-[14px]">Stable Build</p>
+                    </button>
+                    <!-- button-2 -->
+                    <button>
+                        <!-- <p class="bg-[#0066b8] px-4 py-5 text-[30px] text-white">⌄</p> -->
+                        <img class="bg-[#0066b8] px-3 py-7 w-10" src="./Assets/drop down arrow.png" alt="Drop down arrow">
+                    </button>
+                </div>
+
+                <!-- Captions -->
+                <p class="mx-auto text-center text-[14px] font-light mt-3 text-[#0098ff;] bg-[#25252b;] w-[300px] rounded-[8px] px-3 py-2">Web, Insiders edition, <span class="text-zinc-400 font-extralight">or</span> other platforms</p>
+
+                <p class="text-center text-zinc-400 font-light text-[12px] w-[200px] mx-auto mt-6">By using VS Code, you agree to its <span class="text-[#0098ff;]">license and privacy statement.</span></p>
+            </div>
+        </section>
+
+        <!-- Right section -->
+        <section class="w-[60%] mt-10 mb-[50px]">
+            <img class="w-[85%]" src="./Assets/VS Code image.png" alt="VS Code app image">
+        </section>
+
+    </div>
 
     </main>
 
