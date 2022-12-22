@@ -9,14 +9,14 @@
 </head>
 <body>
     <head>
-        <nav class="bg-stone-800 px-5 py-4 flex justify-around items-center" >
-            <div flex>
-            <img class="w-6 h-6" src="./Assets/visual-studio-code-icon.png" alt="VS Code icon">
-            <p class="text-white text-[20px]">Visual Studio Code</p>
-            </div>
+        <nav class="bg-stone-800 px-5 flex justify-around items-center" >
+            <div class="flex gap-x-3 items-center">
 
+            <img class="w-6 h-6" src="./Assets/visual-studio-code-icon.png" alt="VS Code icon">
+            <p class="text-white text-[21px]">Visual Studio Code</p>
+            
             <div>
-                <ul class="text-zinc-400 font-light flex gap-x-5">
+                <ul class="text-zinc-400 font-light flex gap-x-5 ml-5">
                     <li>Docs</li>
                     <li>Updates</li>
                     <li>Blog</li>
@@ -26,18 +26,23 @@
                     <li>Learn</li>
                 </ul>
             </div>
+        </div>
 
-            <div>
-                <img src="./Assets/search.svg" alt="Search icon" class="h-4">
-                <input type="text" placeholder="Search Docs" class="font-extralight bg-zinc-700	w-40 px-5 py-3 text-slate-50	placeholder-white placeholder:text-sm">
+            <div class="flex items-center gap-x-(-1)">
+                <img src="./Assets/search.svg" alt="Search icon" class="h-4 relative left-8">
+                <input type="text" placeholder="Search Docs" class="font-extralight bg-zinc-700	w-[180px] px-5 py-3 text-slate-50 placeholder-gray-100 text-center placeholder:text-sm">
 
-                <button class="text-white bg-blue-500 px-6 py-3">
-                    <span class="text-white">⤓</span>Download
+                <button class="text-white bg-blue-500/80 px-6 py-3">
+                    <span class="text-white mr-2">⤓</span>Download
                 </button>
             </div>
+
         </nav>
     </head>
-
+    
+    <div class="bg-black py-3">
+        <p class="text-center text-zinc-400">For<span class="text-blue-500"> education purpose</span> only. </p>
+    </div>
 
 
     <main>
