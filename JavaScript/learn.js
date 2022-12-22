@@ -235,6 +235,8 @@ console.log(Math.ceil(9.5));    //the value will increase
 
 */
 
+/*
+
 console.log(Math.max(10,4,22,189,1,10,999));
 console.log(Math.min(10,4,22,189,1,10,999));
 
@@ -246,3 +248,70 @@ console.log(Math.random() * 50);
 console.log(Math.round(Math.random() * 51)); //this will round off the random number
 console.log(Math.pow(3, 2));
 console.log(Math.log(2));
+
+*/
+
+/*
+
+let nums = [25, 55, 100, 2, 66, 12, 5];
+console.log(nums);
+
+let names = ["Anurag", "Chiru", "Swami", "Bhargab"];
+console.log(names);
+
+console.log("Length of array nums: " , nums.length);
+console.log("Length of array names: " , names.length);
+
+console.log("----------------");
+
+console.log("The name at 3rd position is: " , names[2]);
+console.log("The name at the last position is: ", names[names.length-1]);
+
+//Change name of last index
+names[names.length-1] = "Abhirup";
+console.log("The changed name at last position is: ", names[names.length - 1]);
+
+
+//Another way to declare array
+
+let namesList = new Array("Vivek", "Guddu", "Anki", "Shuvan");
+console.log(namesList);
+
+//But this method is not recommended
+
+*/
+
+// *****************************************************************************************
+// *****************************************************************************************
+// *****************************************************************************************
+
+
+//  ARRAY METHODS
+
+//To insert an element in the array, we use the push() method . Ex-
+
+
+let names = ["Anurag", "Chiradeep", "Swami", "Bhargab", "Abhirup", "Shuvan"];
+console.log(names);
+
+// If I want to insert the name Hrithik in the array.. ** when we use the push() method, the element is always added at the last index.
+
+names.push("Hrithik");
+console.log(names);
+
+// slice() method - print the elements from a given start index to a given end index, and the end index is not included(it selects the elements till before the end index). **It doesn't change the original array. Ex-
+
+console.log("Printing the names from Chiru to Abhirup- ", names.slice(1,5));
+console.log("Printing the names from Chiru to Shuvan- ", names.slice(1,6)); //index 6 is not present though
+
+
+// splice() method - add elements in the array either by keeping the existing elements or by removing/replacing the existing elements.
+
+let fruits = ["Apple", "Mango", "Banana", "Kiwi", "Orange"];
+fruits.splice(1,0,"Pineapple", "Watermelon");
+console.log(fruits);
+
+let vegetables = ["Potato", "Onion", "Carrot", "Ginger", "Garlic", "Cabbage", "Tomato"];
+vegetables.splice(3, 2, "Beet", "Cauliflower", "Brokoli");
+
+console.log(vegetables);
