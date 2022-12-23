@@ -291,6 +291,8 @@ console.log(namesList);
 //To insert an element in the array, we use the push() method . Ex-
 
 
+/*
+
 let names = ["Anurag", "Chiradeep", "Swami", "Bhargab", "Abhirup", "Shuvan"];
 console.log(names);
 
@@ -309,9 +311,72 @@ console.log("Printing the names from Chiru to Shuvan- ", names.slice(1,6)); //in
 
 let fruits = ["Apple", "Mango", "Banana", "Kiwi", "Orange"];
 fruits.splice(1,0,"Pineapple", "Watermelon");
+// fruits.splice(2); // this creates an array with the elements before the mentioned index i.e. 2 here.
 console.log(fruits);
 
 let vegetables = ["Potato", "Onion", "Carrot", "Ginger", "Garlic", "Cabbage", "Tomato"];
 vegetables.splice(3, 2, "Beet", "Cauliflower", "Brokoli");
 
 console.log(vegetables);
+
+*/
+
+/*
+
+// concat() method - concatenates two or more arrays and returns a new array
+
+console.log(fruits.concat(vegetables));
+
+let arr1 = [1, 2, 3, 4];
+let arr2 = [5, 6, 7, 8];
+let arr3 = [9, 10, 11, 12];
+
+console.log("The resultant array by concatenating arr1, arr2, and arr3: ", arr1.concat(arr2, arr3));
+
+*/
+
+
+// fill() method - replaces elements in an array to a static value, from a start index to an end index.
+
+/*
+
+let namesss = ["Vinay", "Ajay", "Reeshav", "Akash"];
+namesss.fill("Aman", 2, 3);
+// namesss.fill("Aman", 2, 4);
+console.log(namesss);
+
+
+let num = [1, 2, 3, 4 ,5, 6, 7, 7, 8, 10];
+console.log("Is 5 present at or after the index 4? ", num.includes(5, 4));
+
+console.log("Is 7 present at or after the index 3? ",num.includes(7, 3));
+
+console.log("Is 4 present at or after the index 6? ",num.includes(4, 6));
+
+
+// Another example 
+
+let sentence = "Tiny Changes, Remarkable Results";
+
+console.log("Is the word \"Changes\" present in the sentence after  0th index?", sentence.includes("Changes", 0));
+//This will be true as the word Changes is after the 0th index
+
+console.log("Is the word \"Changes\" present in the sentence after  5th index?", sentence.includes("Changes", 5));
+//This will also be true as the word Changes starts from the 5th index
+
+console.log("Is the word \"Changes\" present in the sentence after  6th index?", sentence.includes("Changes", 6));
+//This will be false as the word Changes starts from 5th index and from the 6th index, it will start from "hanges".
+
+// ****** the includes() method checks strings as case sensitive.
+
+
+//indexOf() method - checks and returns the index of a given value and returns -1 if the value is not present. Also, if there are multiple occurance of the same value, then it will return the index of the value which comes first. 
+// **** This is case sensitive for Strings
+
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log("Check the index of the number 6 - ", num.indexOf(6));
+
+let quote = "Make better habits to make a change in life";
+console.log(quote.indexOf("make"));
+
+*/
