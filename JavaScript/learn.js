@@ -19,11 +19,11 @@ console.log(`My first name is ${firstName}`);
 console.log(`My last name is ${lastName}`);
 console.log(`My name is ${firstName} ${lastName} and my contact number is ${mobileNum}`);
 
-*/
 
 
 
-/*
+
+
 
 // Operators
 
@@ -64,14 +64,14 @@ console.log('num1 == num3: ', num1 == num3);  //This will also give true even if
 console.log('num1 === num2' , num1 === num2)  //This will show true as the data types are same for both the variables
 console.log('num1 === num3', num1 === num3)   //This will show false as the data types are not same for both the variables: num1 is a number and num3 is a string
 
-*/
+
 
 
 // Scope of a variable 
 
 // var let and const
 
-/*
+
 
 var a = 10;
 a = 15;
@@ -89,10 +89,10 @@ const c = 28;
 console.log('Value of c: ',c);
 //This will throw a run-time error as the variable c is a constant variable and we cannot change the values of constant variables.
 
-*/
 
 
-/*
+
+
 
 var x = 10;
 
@@ -120,10 +120,10 @@ if(true){
 }
 console.log('Value of z outside the if condition: ', z);    //This will print 88 as the scope of z declared outside the if condition is global but, the scope of the variable z declared inside the if condition is local to the if condition only and hence, that value can't be accessed outside the if condition or outside that scope.
 
-*/
 
 
-/*
+
+
 
 // conditions
 
@@ -181,10 +181,10 @@ switch(day){
 5 < 7 ? console.log("It is true") : console.log("It is false")
 
 
-*/
 
 
-/*
+
+
 //Arrays and Objects
 
 let friends = ['Abhijnan' , 'Bhargav' , 'Chiradeep', 'Abhishek', 'Janmajay', 'Shubhrojit' , 'Swami' , 'Hrithik' , 'Vivek' , 'Guddu'];
@@ -233,9 +233,9 @@ console.log(Math.round(5.365));
 console.log(Math.floor(9.5));   //the value will decrease
 console.log(Math.ceil(9.5));    //the value will increase
 
-*/
 
-/*
+
+
 
 console.log(Math.max(10,4,22,189,1,10,999));
 console.log(Math.min(10,4,22,189,1,10,999));
@@ -249,9 +249,9 @@ console.log(Math.round(Math.random() * 51)); //this will round off the random nu
 console.log(Math.pow(3, 2));
 console.log(Math.log(2));
 
-*/
 
-/*
+
+
 
 let nums = [25, 55, 100, 2, 66, 12, 5];
 console.log(nums);
@@ -279,7 +279,7 @@ console.log(namesList);
 
 //But this method is not recommended
 
-*/
+
 
 // *****************************************************************************************
 // *****************************************************************************************
@@ -291,7 +291,7 @@ console.log(namesList);
 //To insert an element in the array, we use the push() method . Ex-
 
 
-/*
+
 
 let names = ["Anurag", "Chiradeep", "Swami", "Bhargab", "Abhirup", "Shuvan"];
 console.log(names);
@@ -319,9 +319,9 @@ vegetables.splice(3, 2, "Beet", "Cauliflower", "Brokoli");
 
 console.log(vegetables);
 
-*/
 
-/*
+
+
 
 // concat() method - concatenates two or more arrays and returns a new array
 
@@ -333,12 +333,12 @@ let arr3 = [9, 10, 11, 12];
 
 console.log("The resultant array by concatenating arr1, arr2, and arr3: ", arr1.concat(arr2, arr3));
 
-*/
+
 
 
 // fill() method - replaces elements in an array to a static value, from a start index to an end index.
 
-/*
+
 
 let namesss = ["Vinay", "Ajay", "Reeshav", "Akash"];
 namesss.fill("Aman", 2, 3);
@@ -379,4 +379,298 @@ console.log("Check the index of the number 6 - ", num.indexOf(6));
 let quote = "Make better habits to make a change in life";
 console.log(quote.indexOf("make"));
 
-*/
+
+//isArray() - determines whether the passed value is an array.
+// We can only use it as Array.isArray(name-of-the-array);
+// If we use it as (arrayName).isArray(), it will return undefined.
+
+let fruits = ["Apple", "Banana", "Orange", "Mango"];
+console.log("Is fruits variable an array? ", Array.isArray(fruits));
+
+let name = "Azhar Choudhury";
+console.log("Is name variable an array? ", Array.isArray(name));
+
+
+// join() - joins the elements of an array into a string. It doesn't chagne the oriiginal array
+
+let arr1 = [1, 2, 3, 4, 5, 6];
+console.log(arr1.join(' '));
+console.log(arr1.join(' ,and '));
+
+
+//lastIndexOf() - returns the index of the last occurence of a specified value in a string and returns -1 if the value is not found. It is case-sensitive
+// ** It starts searching from the end (it doesn't mean that it will count the last element as 0th index.)
+
+let arr2 = [1, 2, 3, 4, "Azhar", 5, 6, 7 ,"Azhar", 8];
+console.log(arr2.lastIndexOf("Azhar"));
+console.log(arr2.lastIndexOf("Azhar", 7)); // it will start looking for Azhar from the 7th index till the 1st index and will ignore the elements which are after the 7th index. So, basically it will ignore the "Azhar" element which is at the 8th index.
+
+let friendNames = ["Sanjay", "Aman", "Rehman", "Aman", "Rahul"];
+console.log(friendNames.indexOf("Aman"));
+console.log(friendNames.indexOf("Aman", 2)); //it will start searching from 2nd index and hence will return the index value 3 as Aman is at the 3rd index.
+
+
+
+//map() 
+
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers.map(
+    function add(x){
+        let multiply = x * 5;
+        return multiply;
+    }
+    ))
+    
+    
+    //pop() - removes the last element of an array. It changes the oirignal array and it returns the removed element when printed.
+    
+    let fruits = ["Mango", "Banana", "Orange", "Apple"];
+    console.log(fruits.pop());
+    console.log(fruits);
+    
+    
+    //reverse() - reverses the order of the elements in an array and it overwrites the original array.
+    
+    let arr3 = [1, 2, 3, 4, 5, 6];
+    console.log(arr3.reverse());
+    
+    let namess = ["Kunal", "Shitij", "Rahul", "Dherya"];
+    console.log(namess.reverse());
+    
+    
+    // shift() - removes the first element from an array and returns the removed element. It changes the length of the array
+    
+    let numArray = [10, 55, 25, 789, 100, 541];
+    console.log(numArray.shift());
+    console.log(numArray);
+    
+    
+    //unshift() - adds new elements to the beginning of an array. It overwrites the original array
+    
+    let mixed = ["Azhar", 11, 67, 500, "Bhargav", 7, 10];
+    mixed.unshift("Shuvan", "Hrithik", 99, 5);
+    console.log(mixed);
+    
+    
+    //sort()  - sorts the elements of an array in place and returns the reference to the same array.
+    //The default sort order is ascending.
+    
+    
+    let friends = ['Abhijnan' , 'Bhargav' , 'Chiradeep', 'Abhishek', 'Janmajay', 'Shubhrojit' , 'Swami' , 'Hrithik' , 'Vivek' , 'Guddu'];
+    
+    console.log(friends);
+    console.log(friends.sort());    //ascending order
+    console.log(friends.reverse());  //descending order
+    //or,
+    // console.log(friends.reverse(friends.sort())); //but this needs to be run before sorting the array
+    
+    
+    // split() - splits a string into an array of substrings. It returns a new array, and it doesn't change the original string.
+    
+    let sentence1 = "Whatever it takes";
+    // console.log(sentence1.split(' '));
+    let newArray = sentence1.split(' ');
+    console.log(newArray);
+    console.log(newArray.length);
+    console.log(sentence1.split(''));
+    
+    
+    
+    //for of loop - loops through the values of an iterable object.
+    //It lets us loop over iterable data structures such as Arrays, Strings, Maps, Nodelists etc.
+    
+    let carBrands = ["BMW", "Mercedes", "Volvo", "Porsche", "Jaguar", "Volkswagen"];
+    for(let element of carBrands){
+        console.log(element);
+    }
+    
+    console.log("*****************************");
+    
+    let name = "Azhar Choudhury";
+    for(let i of name){
+        console.log(i);
+    }
+    
+    console.log("*****************************");
+    
+    let number = "2456";
+    for(let digits of number){
+        console.log(digits);
+    }
+    
+    
+    //This was fun....
+    let oldBrands = ["Samsung", "Nokia", "Motorolla", "LG"];
+    
+    let newBrands = ["Oppo", "Vivo", "Lenovo", "Redmi"];
+    
+    let allBrands = [];
+    
+    for(let brands of newBrands){
+        for(let brands of oldBrands){
+            allBrands.push(brands.toUpperCase());
+        }
+        allBrands.push(brands.toUpperCase());
+    }
+    
+    console.log(allBrands);
+    
+    
+    
+    //break
+    for(let i=0; i<5; i++){
+        if(i == 3){
+            break;
+        }
+        console.log(i);
+    }
+    
+    console.log("**********");
+    
+    //continue
+    for(let i=0; i<5; i++){
+        if(i == 3){
+            continue;
+        }
+        console.log(i);
+    }
+    
+    
+    
+    
+    //functions
+    
+    function addNums() {
+        let num1 = 5;
+        let num2 = 15;
+        
+        console.log("Addition of two numbers: ", num1 + num2);
+    }
+    
+    addNums();
+    addNums();
+    addNums();
+    addNums();
+    
+    
+    //let us change the numbers according to the user's will
+    
+    
+    //if we want a void function then
+    
+    function addNums(num1, num2) {
+        console.log("The sum of ", num1, " and ", num2, " is: ", num1 + num2);
+    }
+    
+    
+    addNums(2, 5);
+    addNums(87, 44);
+    addNums(19, 20);
+    addNums(78, 52);
+    addNums(29, 90);
+    
+    
+    //function with return type
+    
+    function sum(a, b) {
+        return a + b;
+    }
+    
+    
+    console.log("The sum is:  ", sum(2, 5));
+    console.log("The sum is:  ", sum(25, 15));
+    console.log("The sum is:  ", sum(66, 43));
+    console.log("The sum is:  ", sum(103, 78));
+    console.log("The sum is:  ", sum(66, 87));
+    console.log("The sum is:  ", sum(256, 512));
+    
+    
+    //**********************************************************
+    //functions with strings
+    
+    function url(domain, path){
+        let protocol = "https://";
+        let result = protocol + domain + path;
+        return result;
+    }
+    
+    let site = url("fonts.google.com", "/icons");
+    console.log(site);
+    
+    
+    // array in functions
+    
+    function sumArray(array) {
+        let sum = 0;
+        
+        // for(let i=0; i<array.length; i++){
+            //     sum = sum + array[i];
+            // }
+            
+            for (let i of array) {
+                sum += i;
+            }
+            return sum;
+        }
+        
+        
+        
+        let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        
+        let result1 = sumArray(arr1);
+        console.log("The sum of the array is: ", result1);
+        
+        
+        //array as arguments
+        
+        function arr2(){
+            let sum = 0;
+            
+            // let's see how arguments stores the values
+            // this is not used generally. Instead of 'arguments', we use spread and rest operators.
+            // will learn about them later
+            console.log(arguments);
+            
+            for(let i =0; i<arguments.length; i++){
+                sum += arguments[i];
+            }
+            return sum;
+            
+        }
+        
+        
+        let result2 = arr2(2, 4, 5, 6, 7, 1, 8, 9);
+        console.log(result2);
+        
+        
+        
+        //Arrow Functions
+        
+        let demoArrow = () => {
+            console.log("This is just an arrow function!!");
+        }
+        
+        demoArrow();
+        
+        
+        let sum = (num1, num2) => {return num1 + num2};
+        console.log("Sum: ", sum(55,95));
+        
+        
+        */
+
+        //Objects
+
+        let user = {
+            firstName: 'Azhar',
+            lastName: 'Choudhury',
+            role: 'Front-End Developer',
+            level: '11'
+        }
+
+        console.log(user);
+        console.log(user.role);
+
+        user.level= '10';
+        console.log(user);
+        console.log(user.level);
