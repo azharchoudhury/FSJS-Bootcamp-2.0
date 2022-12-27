@@ -20,11 +20,6 @@ console.log(`My last name is ${lastName}`);
 console.log(`My name is ${firstName} ${lastName} and my contact number is ${mobileNum}`);
 
 
-
-
-
-
-
 // Operators
 
 
@@ -657,20 +652,53 @@ console.log(numbers.map(
         console.log("Sum: ", sum(55,95));
         
         
-        */
-
+        
         //Objects
-
+        
         let user = {
             firstName: 'Azhar',
             lastName: 'Choudhury',
             role: 'Front-End Developer',
             level: '11'
         }
-
+        
         console.log(user);
         console.log(user.role);
-
+        
         user.level= '10';
         console.log(user);
         console.log(user.level);
+        
+        //let us print all the keys of the object with for-in loop
+        
+        console.log("This will print all the keys of the objec")
+        for(let x in user){
+            console.log(x);
+        }
+        
+        console.log('');
+        
+        //let us print all the values of the keys in the object
+        console.log("This will print all the values of the keys in the object");
+        for(let x in user){
+            console.log(user[x]);
+        }
+        
+        
+        
+        let user = {
+            firstName: 'Azhar',
+            lastName: 'Choudhury',
+            role: 'Front-End Developer',
+            level: '11'
+        }   //tried with for of loop.. it doesn't work with objects
+        
+        
+        console.log('');
+        
+        for(let x in user){
+            console.log(user[x]);
+        }   //for in loops works for objects
+        
+        
+        */
