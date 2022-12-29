@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css ">
+</head>
+<body>
+    <input type="text" id="input-amount">
+    <button id="btn-add-expense">+</button>
+
+
+    <script>
+        // const btnCounter = document.querySelector("#btn-counter");
+        // console.log(btnCounter);
+
+
+        // let counter = 0;
+
+        // btnCounter.addEventListener("click", function counterIncrement(){
+        //     counter++;
+        //     console.log(counter);
+        // });
+
+        
+        const btnAddExpense = document.querySelector("#btn-add-expense");
+        const inputAmount = document.querySelector("#input-amount");
+        
+        let totalExpense = 0;
+
+        function addExpenseToTotal(){
+            const amount = inputAmount.value;
+            // console.log({amount});
+            
+            const expense = parseInt(amount, 10);
+            // console.log(expense);
+            
+            totalExpense += expense;
+            console.log(totalExpense);
+            
+        }
+
+
+        btnAddExpense.addEventListener("click", addExpenseToTotal);
+
+
+
+
+
+    </script>
+</body>
+</html>
