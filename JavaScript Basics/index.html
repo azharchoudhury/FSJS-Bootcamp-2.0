@@ -9,6 +9,8 @@
 </head>
 <body>
     <h1 id="heading-element"></h1>
+
+    <input type="text" id="input-description">
     <input type="text" id="input-amount">
     <button id="btn-add-expense">+</button>
 
@@ -27,15 +29,25 @@
 
         //get heading element
         const headingElement = document.querySelector("#heading-element");
-        
         const btnAddExpense = document.querySelector("#btn-add-expense");
         const inputAmount = document.querySelector("#input-amount");
+        const inputDescription = document.querySelector("#input-description");
         
         let totalExpense = 0;
+
+        //Array
+        const allExpenses = [];
 
 
     // Function-------
         function addExpenseToTotal(){
+
+            //make an object
+            const expenseOfItems = {};
+
+        //get the value of the input description
+            const description = inputDescription.value;
+            // console.log(description);
 
         //get the value of the input amount
             const amount = inputAmount.value;
@@ -44,10 +56,21 @@
         //convert it to number    
             const expense = parseInt(amount, 10);
             // console.log(expense);
+
+        //put them into an object
+            expenseOfItems.desc = description;
+            expenseOfItems.amount = amount;
+
+            // console.log(expenseOfItems);
+
+            allExpenses.push(expenseOfItems);
+
+            console.clear();
+            console.table(allExpenses);
             
         //add the value to total expense
             totalExpense += expense;
-            console.log(totalExpense);
+            // console.log(totalExpense);
 
         //display the total expense in the heading element
             headingElement.textContent = totalExpense;
