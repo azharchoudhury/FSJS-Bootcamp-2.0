@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css ">
 </head>
 <body>
+    <h1 id="heading-element"></h1>
     <input type="text" id="input-amount">
     <button id="btn-add-expense">+</button>
 
@@ -24,21 +25,32 @@
         //     console.log(counter);
         // });
 
+        //get heading element
+        const headingElement = document.querySelector("#heading-element");
         
         const btnAddExpense = document.querySelector("#btn-add-expense");
         const inputAmount = document.querySelector("#input-amount");
         
         let totalExpense = 0;
 
+
+    // Function-------
         function addExpenseToTotal(){
+
+        //get the value of the input amount
             const amount = inputAmount.value;
             // console.log({amount});
             
+        //convert it to number    
             const expense = parseInt(amount, 10);
             // console.log(expense);
             
+        //add the value to total expense
             totalExpense += expense;
             console.log(totalExpense);
+
+        //display the total expense in the heading element
+            headingElement.textContent = totalExpense;
             
         }
 
