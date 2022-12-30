@@ -58,7 +58,7 @@ function App() {
 
   function printInput(event){
     // let words = event.target.value;
-    setinputValue(event.target.value);
+    setInputValue(event.target.value);
   }
 
   return (
@@ -68,7 +68,7 @@ function App() {
 
     <input onChange={printInput}></input>
 
-    <h3 style={{color: "blue"}}>{text}</h3>
+    <h3 style={{color: "blue"}}>{inputValue}</h3>
 
 
 
