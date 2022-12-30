@@ -14,6 +14,18 @@ function App() {
     // </div>
   // )
 
+
+  const age = 22;
+  const isGreen = false;
+
+  // if(age >= 18){
+  //   return <h1>Over Age</h1>
+  // }
+  // else{
+  //   return <h2>Under Age</h2>
+  // }
+
+
   return (
    <div className="App">
 
@@ -25,10 +37,20 @@ function App() {
     <User name="Abhirup" age={25} email="abhirup@life.com" />
     <User name="Bhargav" age={25} email="bhargav@life.com" /> */}
 
-    <Job salary = {1400000} position = "Senior SDE" company="Amazon"/>
-    <Job salary = {2400000} position = "Project Manager" company="Google"/>
-    <Job salary = {1200000} position = "Junior SDE" company="Razorpay"/>
 
+    {/* <Job salary = {1400000} position = "Senior SDE" company="Amazon"/>
+    <Job salary = {2400000} position = "Project Manager" company="Google"/>
+    <Job salary = {1200000} position = "Junior SDE" company="Razorpay"/> */}
+
+    {age >= 18 ? <h1>Over Age</h1> : <h2>Under Age</h2>} 
+    {/* Ternary operator */}
+    <h1 style={{color: isGreen ? "green" : "red"}}>This has color.</h1>
+
+    <br/>
+    <br/>
+    <br/>
+
+    
 
    </div>
   );
