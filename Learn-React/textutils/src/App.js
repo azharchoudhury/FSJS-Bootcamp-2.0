@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from "react";
 
 function App() {
   // const  name = "Azhar";
@@ -15,7 +16,7 @@ function App() {
   // )
 
 
-  const age = 22;
+  // const age = 22;
   const isGreen = true;
   const userName = "David";
   const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin", "Lucas"];
@@ -36,6 +37,8 @@ function App() {
     {name: "Uranus", isGasPlanet: true},
   ]
 
+  const age = 0;
+
 
   // if(age >= 18){
   //   return <h1>Over Age</h1>
@@ -44,9 +47,30 @@ function App() {
   //   return <h2>Under Age</h2>
   // }
 
+  let [counter, setCounter] = useState(0);
+
+  let [inputValue, setInputValue] = useState(" ");
+
+  function increaseAge(){
+    counter++;
+    setCounter(counter);
+  }
+
+  function printInput(event){
+    // let words = event.target.value;
+    setinputValue(event.target.value);
+  }
 
   return (
    <div className="App">
+
+    <h1>{counter}<button onClick={increaseAge}>Increase Age</button></h1>
+
+    <input onChange={printInput}></input>
+
+    <h3 style={{color: "blue"}}>{text}</h3>
+
+
 
     {/* <User/>
     <User/>
