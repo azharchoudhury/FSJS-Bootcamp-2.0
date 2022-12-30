@@ -18,8 +18,23 @@ function App() {
   const age = 22;
   const isGreen = true;
   const userName = "David";
-  const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin"];
+  const names = ["Pedro", "Jake", "Jessica", "Mike", "Dustin", "Lucas"];
 
+  const users = [
+    {name: "Pedro", age: 21},
+    {name: "Jake", age: 25},
+    {name: "Jessica", age: 21},
+  ]
+
+
+  const planets = [
+    {name: "Mars", isGasPlanet: false},
+    {name: "Earth", isGasPlanet: false},
+    {name: "Jupiter", isGasPlanet: true},
+    {name: "Venus", isGasPlanet: false},
+    {name: "Neptune", isGasPlanet: true},
+    {name: "Uranus", isGasPlanet: true},
+  ]
 
 
   // if(age >= 18){
@@ -65,13 +80,47 @@ function App() {
        return <h4 key={index}>{name}</h4>
     })}
 
-    
+    <br/>
+    <br/>
+    <br/>
+
+    {users.map((user, index) => {
+      // return <div>{user.name}{user.age}</div>
+      {/* We can do this using props.. Let us see below */}
+      return <User name={user.name}  age={user.age}/>
+    })}
+
+    {/* {planets.map((planetNames, index) =>{
+      return <Planet key="index" name={planetNames.name} isGasPlanet={planets.isGasPlanet}/>
+    })} */}
+
+    {/* {planets.map((planet, key)=> planet.isGasPlanet && <h1>{planet.name}</h1>)} */}
+
+    <br/>
+    <br/>
+    <br/>
+
+    {planets.map((planet, key) => {
+      return <h1><Planet name={planet.isGasPlanet && planet.name}/></h1>
+    })}
 
    </div>
   );
 }
 
 // Props
+
+const User = (props) => {
+  return (<div>{props.name}{props.age}</div>)
+}
+
+const Planet = (props) =>{
+  return (
+    <div>{props.name} {props.isGasPlanet}</div>
+  )
+}
+
+
 // const Job = (props) =>{
 //   return(
 //     <div>
