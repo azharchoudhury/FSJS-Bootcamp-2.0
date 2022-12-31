@@ -51,6 +51,10 @@ function App() {
 
   let [inputValue, setInputValue] = useState(" ");
 
+  let [showText, setShowText] = useState(false);
+  
+  let [textColor, setTextColor] = useState(" ");
+
   function increaseAge(){
     counter++;
     setCounter(counter);
@@ -61,14 +65,46 @@ function App() {
     setInputValue(event.target.value);
   }
 
+
+  let [numCount, setNumCount] = useState(0);
+
   return (
    <div className="App">
+
+    <br/>
+
+    <button onClick={() => {
+      setNumCount(++numCount)
+    }}>Increase</button>
+
+    <button onClick={() => {
+      setNumCount(--numCount);
+    }}>Decrease</button>
+
+    <button onClick={() => {
+      setNumCount(numCount = 0);
+    }}>Set to Zero</button>
+
+    <h2>{numCount}</h2>
 
     <h1>{counter}<button onClick={increaseAge}>Increase Age</button></h1>
 
     <input onChange={printInput}></input>
 
     <h3 style={{color: "blue"}}>{inputValue}</h3>
+
+    <button onClick={() => {
+      setShowText(!showText);
+    }}>Show/Hide</button>
+
+    <button onClick={() => {
+      setTextColor(textColor === "black" ? "purple" : "black");
+    }}>Change color</button>
+
+    {/* {showText && <h2 style={{color: "red"}}>My name is Azhar</h2>} */}
+    {showText && <h2 style={{color: "red"}}>My name is Azhar</h2>}
+
+    <h3>Hello everyone at <span style={{color: textColor}}><h1>Accenture</h1></span></h3>
 
 
 
@@ -134,15 +170,15 @@ function App() {
 
 // Props
 
-const User = (props) => {
-  return (<div>{props.name}{props.age}</div>)
-}
+// const User = (props) => {
+//   return (<div>{props.name}{props.age}</div>)
+// }
 
-const Planet = (props) =>{
-  return (
-    <div>{props.name} {props.isGasPlanet}</div>
-  )
-}
+// const Planet = (props) =>{
+//   return (
+//     <div>{props.name} {props.isGasPlanet}</div>
+//   )
+// }
 
 
 // const Job = (props) =>{
