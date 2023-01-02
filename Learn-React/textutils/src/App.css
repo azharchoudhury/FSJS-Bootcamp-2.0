@@ -44,3 +44,20 @@
 button{
   padding: 0.5rem 2rem;
 }
+
+
+table{
+  margin: auto;
+  width: 800px;
+  height: 200px;
+  border-collapse: collapse;
+}
+
+th{
+  border: 2px solid black;
+}
+
+td{
+  text-align: center;
+  border: 2px solid black;
+}
