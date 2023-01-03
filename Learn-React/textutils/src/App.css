@@ -45,6 +45,11 @@ button{
   padding: 0.5rem 2rem;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
 
 table{
   margin: auto;
@@ -55,9 +60,20 @@ table{
 
 th{
   border: 2px solid black;
+  padding: 0.5rem;
 }
 
 td{
   text-align: center;
   border: 2px solid black;
+}
+
+.heading{
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+}
+
+.table-heading{
+  background-color: yellowgreen;
 }
