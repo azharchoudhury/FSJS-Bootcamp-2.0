@@ -702,3 +702,10 @@ console.log(numbers.map(
         
         
         */
+
+
+        // ! This is a very critical comment
+        // * This is a highlighted comment
+        // TODO: This is a TODO comment
+        // ? This is a question comment
+        // THis is a normal comment
