@@ -1,13 +1,21 @@
 import './App.css';
 import React, { useState } from "react";
-import UserDetails  from './UserDetails';
+// import UserDetails  from './UserDetails';
+import UserForm from './UserForm';
 
 
 // root.render(<UserDetails/>)
 
-export default function App(){
+/* export default function App(){
     return (
         <UserDetails/>
+    )
+}
+ */
+
+export default function Form(){
+    return(
+        <UserForm/>
     )
 }
 

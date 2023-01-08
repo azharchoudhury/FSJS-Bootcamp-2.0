@@ -1,0 +1,163 @@
+import { useState } from "react";
+// import './App.css'
+import swal from 'sweetalert';  
+
+function Form(){
+
+
+// States for registration
+const [firstName, setFirstName] = useState(' ');
+const [lastName, setLastName] = useState(' ');
+const [age, setAge] = useState(0);
+const [employeeID, setEmployeeID] = useState(0);
+const [emailID, setEmailID] = useState(' ');
+
+
+// States for checking the errors
+ const [submitted, setSubmitted] = useState(false);
+ const [error, setError] = useState(false);
+
+
+// Handling the user details change
+
+    const firstNameHandler = (event) => {
+        setFirstName(event.target.value);
+        setSubmitted('false');
+    }
+
+
+    const lastNameHandler = (event) => {
+        setLastName(event.target.value);
+        setSubmitted(false);
+    }
+
+
+    const ageHandler = (event) => {
+        setAge(event.target.value);
+        setSubmitted(false);
+    }
+
+
+    const employeeIdHandler = (event) => {
+        setEmployeeID(event.target.value);
+        setSubmitted(false);
+    }
+
+
+    const emailIDHandler = (event) => {
+        setEmailID(event.target.value);
+        setSubmitted(false);
+    }
+
+
+    // Handling the form submission
+    const submitButtonHandler = (event) => {
+        event.preventDefault();
+        if(firstName == '' || lastName == '' || age == '' || employeeID== '' || emailID == ''){
+            setError(true);
+            swal({
+                title: "Oops!!",
+                text: "Something went wrong.. Please enter all the fields.",
+                icon: "error",
+                button: "OK"
+            })
+        } else {
+            //Adding form data to the user data array
+            
+            setSubmitted(true);
+            swal({
+                title: "Congrats!!",
+                text: "You have successfully registered.",
+                icon: "success",
+                button: "Done"
+            });
+
+            setError(false);
+        }
+    };
+
+    // Showing success message
+    const successMessage = () => {
+        return (
+            <div className = "successful" style = {{display: submitted ? '' : 'none'}}>
+                {/* <h1>User {firstName} successfully registered!! </h1> */}
+            </div>
+        );
+    };
+
+    // Showing error message
+    const errorMessage = () => {
+        return (
+            <div className="error" style={{ display: error ? '' : 'none'}}>
+                    {/* alert("Please enter all the fields"); */}
+                    {/* <h1>Please enter all the fields!!</h1> */}
+            </div>
+        );
+    };
+
+
+    return (
+        <div className="userForm" style={{backgroundColor: "gold", minHeight: "100vh", padding: "1rem"}}>
+            <div style={{textAlign: "center", margin: "5rem auto", color: "purple", backgroundColor: "yellow", padding: "1rem", width:"60%"}}>
+                <h1>User Registration</h1>
+            </div>
+
+            {/* Function calls */}
+
+            <div className="actionMessages">
+                {errorMessage()}
+                {successMessage()}
+            </div>
+
+            {/* Form */}
+            <form onSubmit={submitButtonHandler}>
+
+                <div className="fields" style={{display: "flex", padding:"2rem 0 10rem", gap: 20, alignItems: "center", textAlign: "center"}}>
+                    {/* First Name */}
+                    <div className="firstName">
+                        <label className="label">First Name</label>
+                        <input type="text" className="input" value={firstName} onChange={firstNameHandler} />
+                    </div>
+
+                    {/* Last Name */}
+                    <div className="lastName">
+                        <label className="label">Last Name</label>
+                        <input type="text" className="input" value={lastName} onChange={lastNameHandler} />
+                    </div>
+
+                    {/* Age */}
+                    <div className="age">
+                        <label className="label">Age</label>
+                        <input type="number" className="input" value={age} onChange={ageHandler} />
+                    </div>
+
+                    {/* Employee ID */}
+                    <div className="employeeId">
+                        <label className="label">Employee ID</label>
+                        <input type="number" className="input" value={employeeID} onChange={employeeIdHandler} />
+                    </div>
+
+                    {/* Email */}
+                    <div className="employeeEmailId">
+                        <label className="label">Employee E-Mail ID</label>
+                        <input type="email" className="input" value={emailID} onChange={emailIDHandler} />
+                    </div>
+
+
+                    {/* Submit button */}
+                    <div className="col-md-12 text-center">
+                        <button type="submit" onClick={submitButtonHandler}>Submit</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    )
+
+
+
+}
+
+
+export default Form;
