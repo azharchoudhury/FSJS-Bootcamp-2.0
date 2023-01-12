@@ -4,5 +4,8 @@
     "react-bootstrap": "^2.7.0",
     "save": "^2.9.0",
     "sweetalert": "^2.1.2"
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.6.2"
   }
 }

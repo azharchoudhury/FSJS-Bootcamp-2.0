@@ -1,178 +1,158 @@
-import { useState } from "react";
+import { useState } from "react"
 import './App.css'
 import swal from 'sweetalert';
 
+function  UserForm( props) {
+// const[formData, setFormData] = useState(name:"")
+const [name, setName] =useState('');
+const[age,setAge]=useState('');
+const[employeeid,setEmployeeid]=useState('');
+const[emaiid,setEmailid]=useState('');
+const [data, setData] = useState([]);
+
+//Error handling states
+const[submitted ,setSubmitted]=useState(false);
+const[error,SetError]=useState(false);
 
 
-function UserForm(props){
-    // States for registration
-    const[firstName, setFirstName] = useState('');
-    const[lastName, setLastName] = useState('');
-    const[age, setAge] = useState(0);
-    const[employeeID, setEmployeeID] = useState(0);
-    const[emailID, setEmailID] = useState('');
+// const [entry, setEntry] = useState('');
 
 
-    // States for error checking
-    const[submitted, setSubmitted] = useState(false);
-    const[error, setError] = useState(false);
+const handleName=(e)=>{
+setName(e.target.value);
+// setEntry(e.target.value);
+setSubmitted(false);
+};
+const handleAge=(e)=>{
+    setAge(e.target.value);
+    // setEntry(e.target.value);
+    setSubmitted(false);
+};
+const handleEmployeeid=(e)=>{
+setEmployeeid(e.target.value);
+// setEntry(e.target.value);
+setSubmitted(false);
+};
+const handleEmailid=(e)=>{
+    setEmailid(e.target.value);
+    // setEntry(e.target.value);
+    setSubmitted(false);
+};
 
 
-    // Handling the first name change
-    const firstNameChangeHandler = (event) => {
-        setFirstName(event.target.value);
-        setSubmitted(false);
-    };
+// const changeHandler= (event) => {
 
-    // Handling the last name change
-    const lastNameChangeHandler = (event) => {
-        setLastName(event.target.value);
-        setSubmitted(false);
-    };
-
-    // Handling the age change
-    const ageChangeHandler = (event) => {
-        setAge(event.target.value);
-        setSubmitted(false);
-    }
-
-    // Handling the employee ID change
-    const employeeIdChangeHandler = (event) => {
-        setEmployeeID(event.target.value);
-        setSubmitted(false);
-    }
-
-    // Handling the employee email ID change
-    const EmailIdChangeHandler = (event) => {
-        setEmailID(event.target.value);
-        setSubmitted(false);
-    }
+// }
 
 
 
-    const submitButtonHandler = (event) => {
-        event.preventDefault();
-
-        // Error check and validation
-        if(firstName == '' || lastName == '' || age == '' || employeeID == '' || emailID == ''){
-            setError(true);
-            swal({
-                title: "Oops!!",
-                text: "Something just went wrong... Please enter all the fields...",
-                icon: "error",
-                button: "OK!"
-            });
-        }
-        // else {
-        //     //Adding form data to the user data array
-            
-        //     setSubmitted(true);
-        //     swal({
-        //         title: `Congrats ${firstName}!!`,
-        //         text: "You have successfully registered.",
-        //         icon: "success",
-        //         button: "Done"
-        //     });
-
-        //     setError(false);
-        // }
-
-        else{
-            // Add form data to the user data array
-            props.updateData({firstName, lastName, age, employeeID, emailID});
-
-            // Clear the form fields
-            setFirstName('');
-            setLastName('');
-            setAge('');
-            setEmployeeID('');
-            setEmailID('');
-            setSubmitted(true);
-            
-            swal({
-                title: "Yayy!!",
-                text: "You have successfully registered",
-                icon: "success",
-                button: "Done"
-            });
-            setError(false);
-        }
-   };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (name === '' || age === '' || employeeid === '' || emaiid === '') {
+    SetError(true);
+    swal({  
+      title: " Oops!",  
+      text: " Something went wrong, Please enter all fileds",  
+      icon: "error",  
+      button: "OK!",  
+    })
 
 
-
-//    Display success message
+  } else {
+    // Add form data to the data array
+    props.updateData({ name, age, employeeid, emaiid });
+    // Clear the form fields
+    
+    setName('');
+    setAge('');
+    setEmployeeid('');
+    setEmailid('');
+    setSubmitted(true);
+    swal({  
+      title: "You have successfully registered",
+      text: "",  
+      icon: "success",  
+      button: "Done!",  
+    });  
+    SetError(false)
+    
+  };
+  
+  
+};
 
 const successMessage = () => {
-    return(
-        <div style={{display: submitted ? '' : 'none'}}> 
-            <h1></h1>
-        </div>
-    )
-}
-
-
-
-// Display error message
-const errorMessage = () => {
+  return (
+    <div
+      style={{
+        display: submitted ? '' : 'none',
+      }}>
+    </div>
+  );
+};
+  // Showing error message if error is true
+  const errorMessage = () => {
     return (
-        <div style={{display: error ? '' : 'none'}}> </div>
-    )
-}
+      <div
+        style={{
+          display: error ? '':'none'
+          
+        }}>
+          
+      </div>
+    );
+  };
+return(
+        <div>
+      <div>
+        <h1>User Registration</h1>
+      </div>
+ 
+      {/* Calling to the methods */}
+        <div>
 
-
-
-return (
-    <div className="main-div">
-            <h1 className="pt-5 fw-bold">User Registration</h1>
-
-        <div className="fields">
-            <form onSubmit = {submitButtonHandler}>
+            <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col">
-                        <label className="label">First Name</label>
-                        <input type="text" onChange={firstNameChangeHandler} className="form-control" value={firstName} placeholder="Please enter your first name" />
+                      <label>Name:</label>
+                      <input onChange= {handleName} value={name} className="form-control" placeholder="Please enter name" aria-label="Name" type="text"/>
                     </div>
+                    <br></br>
 
                     <div className="col">
-                        <label className="label">Last Name</label>
-                        <input type="text" onChange={lastNameChangeHandler} className="form-control" value={lastName} placeholder="Please enter your last name" />
+                      <label>Age:</label>
+                      <input onChange={handleAge} value={age} className="form-control" placeholder="Please enter age" aria-label="Age"type="number"/>
                     </div>
-
+                  </div>
+                  <br></br>
+                  <div className="row">
                     <div className="col">
-                            <label className="label">Age</label>
-                            <input type="number" onChange={ageChangeHandler} className="form-control" value={age} placeholder="Please enter your age" />
+                      <label> EmployeeId:</label>
+                      <input onChange={handleEmployeeid} value={employeeid} className="form-control" placeholder="Please enter employeed id" aria-label="employeeid" type="number"/>
                     </div>
-
-
-                    <div className="col">
-                        <label className="label">Employee ID</label>
-                        <input type="number" onChange={employeeIdChangeHandler} className="form-control" value={employeeID} placeholder="Please enter your employee ID" />
-                    </div>
-
-                    <div className="col">
-                        <label className="label">E-Mail ID</label>
-                        <input onChange={EmailIdChangeHandler} type="email" className="form-control" value={emailID} placeholder="Please enter your e-mail ID" />
-                    </div>
-
+                  <br/>
+                  <div className="col">
+                    <label>EmailId:</label>
+                    <input onChange={handleEmailid} value={emaiid} className="form-control" placeholder="Please enter e-mail id" aria-label="Emailid" type="email" />
+                  </div>
                 </div>
 
-                <br />
+                <br></br>
 
-                    <div className="button">
-                        <button className="btn btn-primary" onClick={submitButtonHandler} type="submit">Submit</button>
-                    </div>
+                <div className="col-md-12 text-center">
+                  <button className="btn btn-primary" onClick={handleSubmit} type="submit">Submit</button>
+                </div>
 
-                    <div className="messages">
-                        {errorMessage()}
-                        {successMessage()}
-                    </div>
+              <div className="messages">
+                {errorMessage(   )}
+                {successMessage()  }
+              </div>
+        
             </form>
+          
         </div>
-
-    </div>
+        </div>
     )
 }
-
 
 export default UserForm;
